@@ -1,5 +1,6 @@
 # HotelProj
-This is a test task for inCode Systems. You need to download the project and enter in HotelProj after.You will need node.js, the React Native command line tools, Watchman, and Android Studio.
+This is a test task for inCode Systems. You need to download the project and enter in HotelProj after.
+You will need node.js, the React Native command line tools, Watchman, and Android Studio.
 
 Next, execute the follows operations:
 ```
