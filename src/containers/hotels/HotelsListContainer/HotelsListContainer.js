@@ -73,6 +73,7 @@ class HotelsListContainer extends React.Component {
             />
           </View>
           <View style={styles.hotelTimes}>
+            <Text style={styles.city}>{ hotel.city.description.split(',')[0] }</Text>
             <Text style={styles.created}>Создан: {moment(hotel.created_at).locale('ru', esLocale).format('DD/MM HH:mm')}</Text>
             <Text style={styles.edited}>Обновлен: {moment(hotel.updated_at).locale('ru', esLocale).format('DD/MM HH:mm')}</Text>
           </View>

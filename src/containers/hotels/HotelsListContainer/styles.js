@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     color: 'black',
   },
   hotelTimes: {
-    top: 25,
+    top: 20,
   },
   created: {
     fontSize: 12,
@@ -39,6 +39,11 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontFamily: 'Geometria-Medium',
     color: 'black',
+  },
+  city: {
+    bottom: 16,
+    fontSize: 14,
+    fontFamily: 'Geometria-Medium',
   },
 });
 

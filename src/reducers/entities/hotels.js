@@ -11,7 +11,7 @@ const initialState = {
   hotelId1 : {
     _id: 'hotelId1',
     name: 'Hotel 1',
-    city : {},
+    city : { description: "Питер, город Санкт-Петербург, Россия" },
     stars: 4,
     created_at: 1474715158127,
     updated_at: 1474715158129,
@@ -20,7 +20,7 @@ const initialState = {
   hotelId2 : {
     _id: 'hotelId2',
     name: 'Hotel 2',
-    city : {},
+    city : { description: "Москва, город Москва, Россия" },
     stars: 3,
     created_at: 1474715234037,
     updated_at: 1474715234039,
@@ -29,7 +29,7 @@ const initialState = {
   hotelId3 : {
     _id: 'hotelId3',
     name: 'Hotel 3',
-    city : {},
+    city : { description: "Нижний Новгород, город Нижний Новгород, Россия" },
     stars: 5,
     created_at: 1474715253060,
     updated_at: 1474715253060,
@@ -40,6 +40,7 @@ const initialState = {
 const emptyHotel = {
   _id: '',
   name: '',
+  image: require('@appImages/defaulHotel.png'),
 };
 
 
