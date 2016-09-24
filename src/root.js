@@ -17,8 +17,10 @@ export default class Root extends React.Component {
     return <Provider store={store}>
       <RouterWithRedux>
         <Scene key="root" tabs hideNavBar hideTabBar>
-          <Scene key="hotelsList" component={HotelsListContainer} title="HotelsList" hideNavBar />
-          <Scene key="hotelCard" component={HotelCardContainer} title="HotelCard" hideNavBar />
+          <Scene key="hotels">
+            <Scene key="hotelsList" component={HotelsListContainer} title="HotelsList" hideNavBar />
+            <Scene key="hotelCard" component={HotelCardContainer} title="HotelCard" hideNavBar />
+          </Scene>
         </Scene>
       </RouterWithRedux>
     </Provider>;

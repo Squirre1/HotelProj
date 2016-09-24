@@ -3,6 +3,7 @@ import { View, Text, TouchableHighlight, ScrollView } from 'react-native';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { HotelsListContainerSelector } from '@selectors';
+import { Actions } from 'react-native-router-flux';
 import NavigationBar from 'react-native-navbar';
 import ResponsiveImage from 'react-native-responsive-image';
 import StarRating from '@appComponents/StarRating/StarRating.js';
@@ -15,7 +16,7 @@ let esLocale = require('moment/locale/ru');
 
 const rightButton = (
   <NavBarButton
-    handlerFunc={() => {  }}
+    handlerFunc={() => { Actions.hotelCard(); }}
     icon={ICON}
   />
 );
@@ -41,7 +42,7 @@ class HotelsListContainer extends React.Component {
           statusBar={{ style: 'light-content' }}
         />
         <ScrollView>
-          {hotels.map(hotel => this.renderHotels(hotel))}
+          {hotels.sort((objPrev, objNext) => { return objNext.stars - objPrev.stars; }).map(hotel => this.renderHotels(hotel))}
         </ScrollView>
       </View>
     );
@@ -52,7 +53,7 @@ class HotelsListContainer extends React.Component {
     return (
       <TouchableHighlight
         underlayColor="transparent"
-        onPress={() => {}}
+        onPress={() => { Actions.hotelCard({ hotel: hotel }); }}
       >
         <View key={hotel._id} style={styles.hotelItem}>
             <ResponsiveImage
