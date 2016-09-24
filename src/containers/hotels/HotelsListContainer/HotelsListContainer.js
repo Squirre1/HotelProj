@@ -53,7 +53,7 @@ class HotelsListContainer extends React.Component {
     return (
       <TouchableHighlight
         underlayColor="transparent"
-        onPress={() => { Actions.hotelCard({ hotel: hotel }); }}
+        onPress={() => { Actions.hotelCard({ hotelId: hotel._id }); }}
       >
         <View key={hotel._id} style={styles.hotelItem}>
             <ResponsiveImage

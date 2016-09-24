@@ -1,7 +1,9 @@
 export const HotelCardContainerSelector = state => {
+  const { hotels } = state.entities;
+
 
   return {
-
+    hotels,
   };
 };
 

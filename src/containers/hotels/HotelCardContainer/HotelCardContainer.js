@@ -31,7 +31,8 @@ class HotelCardContainer extends React.Component {
   }
 
   render() {
-    const { hotel } = this.props;
+    const { hotels } = this.props;
+    const hotel = hotels[this.props.hotelId];
 
     return (
       <View>
@@ -42,7 +43,7 @@ class HotelCardContainer extends React.Component {
           style={NavbarStyles.navBar}
           statusBar={{ style: 'light-content' }}
         />
-        {this.renderGoogleAutoComplete()}
+        {this.renderGoogleAutoComplete(hotel)}
         <View style={[styles.propertyContainer, { paddingTop: 10, paddingBottom: 10 }]}>
           <ResponsiveImage
             initWidth="120"
@@ -87,6 +88,8 @@ class HotelCardContainer extends React.Component {
   renderEditing(hotel) {
     const { updateHotel } = this.props;
 
+    debugger;
+
     return (
       <View>
         <View style={[styles.propertyContainer, { paddingTop: 10, paddingBottom: 10, height: 48 }]}>
@@ -110,8 +113,8 @@ class HotelCardContainer extends React.Component {
     );
   }
 
-  renderGoogleAutoComplete() {
-    const { updateHotel, hotel } = this.props;
+  renderGoogleAutoComplete( hotel ) {
+    const { updateHotel } = this.props;
 
     return (
       <CustomGooglePlacesAutocomplete
@@ -202,7 +205,7 @@ class HotelCardContainer extends React.Component {
 }
 
 HotelCardContainer.propTypes = {
-  hotel: React.PropTypes.object,
+  hotels: React.PropTypes.object,
   deleteHotel: React.PropTypes.func,
   createHotel: React.PropTypes.func,
   updateHotel: React.PropTypes.func,

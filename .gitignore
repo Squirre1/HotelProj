@@ -33,6 +33,7 @@ local.properties
 #
 node_modules/
 npm-debug.log
+my-release-key.keystore
 
 # BUCK
 buck-out/
